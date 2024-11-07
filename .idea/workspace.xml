@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="74aa8099-6ad0-4091-8f78-7f9e80c80bcb" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/client" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Server" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2nJhUAElxOp1a7YXYKXHxMYgOmh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.InstaApplication.executor": "Run",
+    "Spring Boot.InstaZooApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pglin/OneDrive/Рабочий стол/Insta",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Users\\pglin\\OneDrive\\Рабочий стол\\Insta\\client\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pglin\OneDrive\Рабочий стол\Insta\client\src\app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="InstaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.InstaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74aa8099-6ad0-4091-8f78-7f9e80c80bcb" name="Changes" comment="" />
+      <created>1728697100936</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728697100936</updated>
+      <workItem from="1728697102103" duration="2092000" />
+      <workItem from="1728817406991" duration="23791000" />
+      <workItem from="1728844827362" duration="17971000" />
+      <workItem from="1728901337019" duration="8854000" />
+      <workItem from="1728914189539" duration="6226000" />
+      <workItem from="1728928790072" duration="2823000" />
+      <workItem from="1728931742776" duration="1250000" />
+      <workItem from="1728935135335" duration="10685000" />
+      <workItem from="1728975778891" duration="2245000" />
+      <workItem from="1728986828827" duration="2256000" />
+      <workItem from="1729004650441" duration="5197000" />
+      <workItem from="1729021349965" duration="14343000" />
+      <workItem from="1729069691186" duration="3361000" />
+      <workItem from="1729093418667" duration="14163000" />
+      <workItem from="1729172351922" duration="3917000" />
+      <workItem from="1729187599191" duration="1678000" />
+      <workItem from="1729204658189" duration="6125000" />
+      <workItem from="1729346264758" duration="3206000" />
+      <workItem from="1729351903825" duration="857000" />
+      <workItem from="1729366886801" duration="7683000" />
+      <workItem from="1729381383584" duration="2416000" />
+      <workItem from="1729438505700" duration="12000" />
+      <workItem from="1729439006617" duration="2000" />
+      <workItem from="1729515991777" duration="5000" />
+      <workItem from="1729517884442" duration="936000" />
+      <workItem from="1729520728661" duration="639000" />
+      <workItem from="1729680659301" duration="1654000" />
+      <workItem from="1729689301832" duration="1196000" />
+      <workItem from="1729713990886" duration="884000" />
+      <workItem from="1729775701606" duration="1495000" />
+      <workItem from="1729782140152" duration="498000" />
+      <workItem from="1729787829737" duration="1338000" />
+      <workItem from="1729794481654" duration="4745000" />
+      <workItem from="1729811348146" duration="894000" />
+      <workItem from="1729953436094" duration="34000" />
+      <workItem from="1730126789667" duration="578000" />
+      <workItem from="1730184593173" duration="4165000" />
+      <workItem from="1730228882646" duration="1098000" />
+      <workItem from="1730551369349" duration="989000" />
+      <workItem from="1730750915428" duration="3182000" />
+      <workItem from="1730898290945" duration="13000" />
+      <workItem from="1730917365526" duration="2420000" />
+      <workItem from="1730996020576" duration="2236000" />
+      <workItem from="1731011221024" duration="278000" />
+      <workItem from="1731011513414" duration="96000" />
+      <workItem from="1731011621491" duration="1147000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
