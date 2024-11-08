@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" style="background-color: cadetblue;">
+  <span routerLink="/main" style="cursor: pointer;margin-left: 20px;" class="toolbar-text fon-menu">Я старалась</span>
+
+  <span class="spacer fon-menu"></span>
+
+  <button *ngIf="!isLoggedIn" matTooltip="Логин" routerLink="/login" mat-icon-button class="example-icon favorite-icon no-focus fon-menu">
+    <mat-icon>login</mat-icon>
+  </button>
+
+  <h3 *ngIf="isDataLoaded"   class="toolbar-text fon-menu">{{this.user.firstname}} {{this.user.lastname}} </h3>
+
+  <button *ngIf="isLoggedIn" [matMenuTriggerFor]="menu" matTooltip="Профиль" mat-icon-button class="example-icon favorite-icon no-focus fon-menu">
+    <mat-icon >account_box</mat-icon>
+  </button>
+  <mat-menu id="menu-item" #menu="matMenu" class="fon-menu">
+    <button mat-menu-item routerLink="/profile" class="fon-menu">Профиль</button>
+    <button (click)="logout()" mat-menu-item class="fon-menu">
+      Выйти
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+

@@ -1,0 +1,38 @@
+<div>
+  <div style="text-align: right">
+    <button mat-flat-button color="primary" routerLink="/profile">Мои посты</button>
+  </div>
+
+  <h2>Создать пост</h2>
+  <form [formGroup]="postForm">
+
+    <img class="post-image" [src]="previewImgURL || 'https://www.missingdogsuk.co.uk/wp-content/plugins/wp-job-manager-resumes/assets/images/candidate.png'" alt="user image">
+
+    <input type="file"
+           style="display: none"
+           #fileInput
+           (change)="onFileSelected($event)">
+
+    <button mat-button class="no-focus" (click)="fileInput.click()">Выберите файл</button>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Заголовок</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Описание</mat-label>
+      <input matInput formControlName="caption">
+    </mat-form-field>
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Место</mat-label>
+      <input matInput formControlName="location">
+    </mat-form-field>
+
+    <div style="text-align: right">
+      <button mat-flat-button color="primary" class="no-focus"
+              [disabled]="!fileSelected || postForm.invalid" (click)="submit()">
+        Создать пост
+      </button>
+    </div>
+  </form>
+</div>

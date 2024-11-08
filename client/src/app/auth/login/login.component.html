@@ -1,0 +1,32 @@
+<div class="login-page">
+  <h2>Авторизация</h2>
+  <form [formGroup]="loginForm">
+    <div>
+      <div class="justify-content-center">  <!-- Используется для центрирования элементов внутри -->
+        <div></div>
+        <mat-form-field appearance="outline">  <!-- для создания полей ввода текста -->
+          <mat-label>Никнейм</mat-label> <!-- заголовок для поля с вводом -->
+          <input matInput
+                 formControlName="username">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Пароль</mat-label>  <!-- Устанавливает тип поля ввода как пароль, скрывая вводимый текст -->
+          <input matInput type="password"
+                 formControlName="password">
+        </mat-form-field>
+      </div>
+
+      <div id="controls" class="row">
+        <button style="width: 20%" class="no-focus" (click)="submit()" mat-flat-button color="primary">
+          Войти
+        </button>
+
+
+        <a routerLink="/register">Регистрация</a>
+      </div>
+    </div>
+  </form>
+</div>
+

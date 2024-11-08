@@ -1,0 +1,21 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+#menu-item button {
+  display: block;
+  margin: 0 auto;
+}
+
+.toolbar-text {
+  color: white;
+}
+
+.no-focus {
+  outline: none;
+}
+
+.fon-menu {
+  background-color: cadetblue !important; /* Темно-зеленый цвет */
+}
+

@@ -1,0 +1,36 @@
+<div *ngIf="isPostsLoaded && isUserDataLoaded" class="index-page" >
+  <mat-card class="post-card" *ngFor="let post of posts; let i = index" style="background-color: white;">
+    <mat-card-header style="text-align: left">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{post.title}}</mat-card-title>
+      <mat-card-subtitle>{{post.location}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="formatImage(post.image)" alt="post image" class="post-card img">
+    <mat-card-subtitle align="start">Опубликовано {{post.username}}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{post.caption}}</p>
+    </mat-card-content>
+
+    <mat-card-actions align="start" >
+
+      <button *ngIf="isUserDataLoaded" mat-button class="no-focus" (click)="likePost(post.id, i)" [ngClass]="post.usersLiked.indexOf(user.username) !== -1 ? 'is-liked' : 'not-liked'">
+        <mat-icon>favorite</mat-icon> Нравится</button>
+    </mat-card-actions>
+
+    <div style="text-align: left" >
+      <p *ngFor="let comment of post.comments"><span style="font-weight: 500">{{comment.username}}</span>: {{comment.message}} </p>
+    </div>
+
+    <mat-form-field class="w-100" >
+      <mat-label class="fon">Написать комментарий...</mat-label>
+      <input class="fon" (keyup.enter)="postComment(($any($event.target).value), post.id, i)" matInput #message maxlength="128">
+      <mat-hint align="end">{{message.value.length}} / 128</mat-hint>
+    </mat-form-field>
+
+  </mat-card>
+</div>
+
+<div *ngIf="!isPostsLoaded || !isUserDataLoaded">
+  <mat-spinner></mat-spinner>
+  <p>Загрузка данных...</p>
+</div>

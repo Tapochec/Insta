@@ -1,0 +1,36 @@
+.index-page {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  padding-top: 3rem;
+}
+
+.post-card {
+  display: block;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.is-liked {
+  color: darkred;
+}
+
+.not-liked {
+  color: grey;
+}
+
+.post-card img {
+  width: 100%; /* Занимает всю ширину поста */
+  height: auto; /* Высота автоматически подстраивается под ширину */
+}
+
+.no-focus {
+  outline: none;
+}
+
+.fon {
+  background-color: white !important;
+}
+
+
+

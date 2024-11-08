@@ -1,0 +1,11 @@
+.register-page {
+  text-align: center;
+}
+
+mat-form-field {
+  width: 50%;
+}
+
+.no-focus {
+  outline: none;
+}
