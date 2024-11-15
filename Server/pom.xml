@@ -12,7 +12,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>21</java.version> <!-- Используйте 11 или 17 для LTS -->
+		<java.version>17</java.version> <!-- Используйте 11 или 17 для LTS -->
 		<spring.boot.version>3.3.2</spring.boot.version> <!-- Используйте последнюю стабильную версию -->
 	</properties>
 
