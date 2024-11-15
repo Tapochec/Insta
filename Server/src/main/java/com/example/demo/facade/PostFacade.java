@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class PostFacade {
 
     public PostDTO PostToPostDTO(Post post) {
-        PostDTO postDTO = new PostDTO();
+        PostDTO postDTO = PostDTO.builder().build();
         postDTO.setId(post.getId());
         postDTO.setTitle(post.getTitle());
         postDTO.setCaption(post.getCaption());

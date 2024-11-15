@@ -8,6 +8,8 @@ import com.example.demo.exceptions.PostNotFoundException;
 import com.example.demo.repository.ImageRepository;
 import com.example.demo.repository.PostRepository;
 import com.example.demo.repository.UserRepository;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class PostService {
 
     public static final Logger LOG = LoggerFactory.getLogger(PostService.class);
@@ -27,12 +30,6 @@ public class PostService {
     private final UserRepository userRepository;
     private final ImageRepository imageRepository;
 
-    @Autowired
-    public PostService(PostRepository postRepository, UserRepository userRepository, ImageRepository imageRepository) {
-        this.postRepository = postRepository;
-        this.userRepository = userRepository;
-        this.imageRepository = imageRepository;
-    }
 
     public Post createPost(PostDTO postDTO, Principal principal) { // Создание нового поста в базе данных
         User user = getUserByPrincipal(principal); // Получение пользователя из `Principal`, который представляет текущего авторизованного пользователя
