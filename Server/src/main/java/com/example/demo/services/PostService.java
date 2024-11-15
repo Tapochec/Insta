@@ -89,7 +89,7 @@ public class PostService {
 
     }
 
-    private User getUserByPrincipal(Principal principal) {
+    public User getUserByPrincipal(Principal principal) {
         String username = principal.getName();
         return userRepository.findUserByUsername(username).orElseThrow(() -> new UsernameNotFoundException("Пользователь " + username + " не найден"));
     }
