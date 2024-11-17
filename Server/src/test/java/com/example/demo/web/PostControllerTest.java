@@ -10,9 +10,9 @@ import com.example.demo.validations.ResponseErrorValidation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
@@ -25,11 +25,11 @@ import java.security.Principal;
 @ExtendWith(MockitoExtension.class)
 class PostControllerTest {
     private MockMvc mockMvc;
-    @MockBean
+    @Mock
     private PostService postService;
-    @MockBean
+    @Mock
     private PostFacade postFacade;
-    @MockBean
+    @Mock
     private ResponseErrorValidation responseErrorValidation;
 
 
@@ -52,7 +52,7 @@ class PostControllerTest {
 
 
         //when
-        Mockito.when(postService.createPost(any(PostDTO.class), any())).thenReturn( new Post());
+        Mockito.when(postService.createPost(any(), any())).thenReturn( new Post());
         Mockito.when(responseErrorValidation.mapValidationService(any())).thenReturn(null);
         Mockito.when(postFacade.PostToPostDTO(any())).thenReturn(postDTO);
 
