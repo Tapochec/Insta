@@ -1,7 +1,9 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -33,6 +35,11 @@ public class Post {
 
     @Column(updatable = false)
     private LocalDateTime createdDate;
+
+    public Post() {
+
+    }
+
 
     @PrePersist
     protected void onCreate(){

@@ -7,6 +7,7 @@ import com.example.demo.payload.response.MessageResponse;
 import com.example.demo.services.PostService;
 import com.example.demo.validations.ResponseErrorValidation;
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("api/post")
 @CrossOrigin
+@AllArgsConstructor
 public class PostController {
 
     @Autowired
