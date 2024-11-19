@@ -13,7 +13,7 @@
 
     <mat-card-actions align="start" >
 
-      <button *ngIf="isUserDataLoaded" mat-button class="no-focus" (click)="likePost(post.id, i)" [ngClass]="post.usersLiked.indexOf(user.username) !== -1 ? 'is-liked' : 'not-liked'">
+      <button *ngIf="isUserDataLoaded" mat-button class="no-focus"  (click)="likePost(post.id, i)" [ngClass]="post.usersLiked.indexOf(user.username) !== -1 ? 'is-liked' : 'not-liked'" >
         <mat-icon>favorite</mat-icon> Нравится</button>
     </mat-card-actions>
 
