@@ -1,4 +1,5 @@
 package com.example.demo.web;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -32,31 +33,30 @@ class PostControllerTest {
     @Mock
     private ResponseErrorValidation responseErrorValidation;
 
-
     PostController postController;
 
+    List<Post> posts = initPosts();
+    List<PostDTO> postDTOS = initPostDTOS();
 
 
     @BeforeEach
     void setUp() {
-      postController = new PostController(postService, postFacade, responseErrorValidation);
+        postController = new PostController(postService, postFacade, responseErrorValidation);
 
     }
 
     @Test
     void createPost_ValidPost() throws Exception {
-        PostDTO postDTO = new PostDTO();
-        postDTO.setId(1L);
         BindingResult bindingResult = null;
         Principal principal = null;
 
         //when
-        Mockito.when(postService.createPost(any(), any())).thenReturn( new Post());
+        Mockito.when(postService.createPost(any(), any())).thenReturn(new Post());
         Mockito.when(responseErrorValidation.mapValidationService(any())).thenReturn(null);
-        Mockito.when(postFacade.PostToPostDTO(any())).thenReturn(postDTO);
+        Mockito.when(postFacade.PostToPostDTO(any())).thenReturn(postDTOS.get(0));
 
         //then
-        ResponseEntity<Object> response = postController.createPost(postDTO, bindingResult, principal);
+        ResponseEntity<Object> response = postController.createPost(postDTOS.get(0), bindingResult, principal);
 
         //validation
         assertEquals(HttpStatus.OK, response.getStatusCode());
@@ -66,26 +66,10 @@ class PostControllerTest {
 
     @Test
     void getAllPosts_Return_OK_Status() throws Exception {
-        List<Post> posts = new ArrayList<>();
-        Post post1 = new Post();
-        post1.setId(1L);
-        Post post2 = new Post();
-        post2.setId(2L);
-        posts.add(post1);
-        posts.add(post2);
-
-        List<PostDTO> postDTOS = new ArrayList<>();
-        PostDTO postDTO1 = new PostDTO();
-        postDTO1.setId(1L);
-        PostDTO postDTO2 = new PostDTO();
-        postDTO2.setId(2L);
-        postDTOS.add(postDTO1);
-        postDTOS.add(postDTO2);
-
         //when
         when(postService.getAllPosts()).thenReturn(posts);
-        when(postFacade.PostToPostDTO(post1)).thenReturn(postDTO1);
-        when(postFacade.PostToPostDTO(post2)).thenReturn(postDTO2);
+        when(postFacade.PostToPostDTO(posts.get(0))).thenReturn(postDTOS.get(0));
+        when(postFacade.PostToPostDTO(posts.get(1))).thenReturn(postDTOS.get(1));
 
         //then
         ResponseEntity<List<PostDTO>> response = postController.getAllPosts();
@@ -98,33 +82,18 @@ class PostControllerTest {
     @Test
     void getUserPosts_Return_OK_Status() throws Exception {
         Principal principal = null;
-        List<Post> posts = new ArrayList<>();
-        Post post1 = new Post();
-        post1.setId(1L);
-        Post post2 = new Post();
-        post2.setId(2L);
-        posts.add(post1);
-        posts.add(post2);
-
-        List<PostDTO> postDTOS = new ArrayList<>();
-        PostDTO postDTO1 = new PostDTO();
-        postDTO1.setId(1L);
-        PostDTO postDTO2 = new PostDTO();
-        postDTO2.setId(2L);
-        postDTOS.add(postDTO1);
-        postDTOS.add(postDTO2);
 
         //when
         when(postService.getAllPostForUser(principal)).thenReturn(posts);
-        when(postFacade.PostToPostDTO(post1)).thenReturn(postDTO1);
-        when(postFacade.PostToPostDTO(post2)).thenReturn(postDTO2);
+        when(postFacade.PostToPostDTO(posts.get(0))).thenReturn(postDTOS.get(0));
+        when(postFacade.PostToPostDTO(posts.get(1))).thenReturn(postDTOS.get(1));
 
         //then
         ResponseEntity<List<PostDTO>> response = postController.getAllPostsForUser(principal);
 
         //validation
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(postDTOS, response.getBody());
+        assertEquals(initPostDTOS(), response.getBody());
     }
 
     @Test
@@ -132,23 +101,16 @@ class PostControllerTest {
         String postId = "1";
         String username = "test";
 
-        PostDTO postDTO = new PostDTO();
-        postDTO.setId(1L);
-        postDTO.setUsername(username);
-
-        Post post = new Post();
-        post.setId(1L);
-
         //when
-        Mockito.when(postService.likePost(Long.parseLong(postId), username)).thenReturn(post);
-        Mockito.when(postFacade.PostToPostDTO(post)).thenReturn(postDTO);
+        Mockito.when(postService.likePost(Long.parseLong(postId), username)).thenReturn(posts.get(0));
+        Mockito.when(postFacade.PostToPostDTO(posts.get(0))).thenReturn(postDTOS.get(0));
 
         //then
         ResponseEntity<PostDTO> response = postController.likePost(postId, username);
 
         //validation
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(postDTO, response.getBody());
+        assertEquals(postDTOS.get(0), response.getBody());
 
     }
 
@@ -165,4 +127,27 @@ class PostControllerTest {
 
     }
 
+    private List<Post> initPosts() {
+        List<Post> posts = new ArrayList<>();
+        Post post1 = new Post();
+        post1.setId(1L);
+        Post post2 = new Post();
+        post2.setId(2L);
+        posts.add(post1);
+        posts.add(post2);
+        return posts;
     }
+
+    private List<PostDTO> initPostDTOS() {
+        List<PostDTO> postDTOS = new ArrayList<>();
+        PostDTO postDTO1 = new PostDTO();
+        postDTO1.setId(1L);
+        postDTO1.setUsername("test");
+        PostDTO postDTO2 = new PostDTO();
+        postDTO2.setId(2L);
+        postDTOS.add(postDTO1);
+        postDTOS.add(postDTO2);
+        return postDTOS;
+    }
+
+}
