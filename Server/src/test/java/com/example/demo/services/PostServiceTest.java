@@ -37,7 +37,6 @@ class PostServiceTest {
     User user = createTestUser();
     Post post = createTestPost();
     List<Post> posts = initPosts();
-    List<PostDTO> postDTOS = initPostDTOS();
 
     @BeforeEach
     void setUp() {
@@ -194,15 +193,4 @@ class PostServiceTest {
         return posts;
     }
 
-    private List<PostDTO> initPostDTOS() {
-        List<PostDTO> postDTOS = new ArrayList<>();
-        PostDTO postDTO1 = new PostDTO();
-        postDTO1.setId(1L);
-        postDTO1.setUsername("test");
-        PostDTO postDTO2 = new PostDTO();
-        postDTO2.setId(2L);
-        postDTOS.add(postDTO1);
-        postDTOS.add(postDTO2);
-        return postDTOS;
-    }
 }
