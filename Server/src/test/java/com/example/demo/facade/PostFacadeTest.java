@@ -16,20 +16,23 @@ class PostFacadeTest {
     User user = createTestUser();
     Post post = createTestPost(user);
     PostFacade postFacade = new PostFacade();
+    PostDTO expectedDto = new PostDTO();
 
     @Test
     void postToPostDTO() {
         //then
         PostDTO dto = postFacade.PostToPostDTO(post);
 
+        expectedDto.setUsersLiked(post.getLikedUsers());
+        expectedDto.setLikes(post.getLikes());
+        expectedDto.setCaption(post.getCaption());
+        expectedDto.setUsername(post.getUser().getUsername());
+        expectedDto.setLocation(post.getLocation());
+        expectedDto.setId(post.getId());
+        expectedDto.setTitle(post.getTitle());
+
         //validation
-        assertEquals(post.getId(), dto.getId());
-        assertEquals(post.getTitle(), dto.getTitle());
-        assertEquals(post.getCaption(), dto.getCaption());
-        assertEquals(post.getUser().getUsername(), dto.getUsername());
-        assertEquals(post.getLikes(), dto.getLikes());
-        assertEquals(post.getLocation(), dto.getLocation());
-        assertEquals(post.getLikedUsers(), dto.getUsersLiked());
+        assertEquals(expectedDto, dto);
     }
 
     private Post createTestPost(User user) {
